@@ -9,13 +9,15 @@ let Header = (props) => {
     const menu = (
         <Menu>
             <Menu.Item key="0">
-                <a href="#">1st menu item</a>
+                <Link to='/menu-item-1'>{props.profileItemOne}</Link>
             </Menu.Item>
             <Menu.Item key="1">
-                <a href="#">2nd menu item</a>
+                <Link to='/menu-item-2'>{props.profileItemTwo}</Link>
             </Menu.Item>
             <Menu.Divider />
-            <Menu.Item key="3">3rd menu item</Menu.Item>
+            <Menu.Item key="3">
+                <Link to='/menu-item-3'>{props.profileItemThree}</Link>
+            </Menu.Item>
         </Menu>
     );
 
@@ -25,7 +27,7 @@ let Header = (props) => {
                 <div className="row">
                     <div className="col-sm-12">
                         <div className="row">
-                            <div className="col-sm-6"><span className="header__logo">SeaPlan</span></div>
+                            <div className="col-sm-6"><span className="header__logo">{props.logo}</span></div>
                             <div className="col-sm-2"><Link to='/'><span className="header__plan float-right">Home</span></Link></div>
                             <div className="col-sm-2"><Link to='/add-work'><span className="header__plan">New Plan</span></Link></div>
                             <div className="col-sm-2">
